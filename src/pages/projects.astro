@@ -5,47 +5,49 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
   <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
+    <div class="text-3xl w-full font-bold mb-5">What I'm Currently Working On</div>
   </div>
-
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
 
   <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
+    <div class="text-2xl w-full font-bold mb-5">Academics</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    title="Check out my thesis :)"
+    img="/time_series_plot.png"
+    desc="I am writing my thesis on the relationship between ordinal estimates of psychological measurements and quantitative structures. See my progress on GitHub!"
+    url="https://github.com/MvanSteenbergen/MasterThesisRQA"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Machine Learning"
+    img="/xgboost.png"
+    desc="I am contributing to a group project where we use XGBoost to classify noisy signals from noise alone."
     url="#"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Full-Stack Development"
+    img="/fullstackopen.png"
+    desc="I am working through the venerated Full Stack Open MOOC by Helsinki University. See my progress on GitHub!"
+    url="https://github.com/MvanSteenbergen/FullStackOpen"
+  />
+
+    <div>
+    <div class="text-2xl w-full font-bold mb-5">Work</div>
+  </div>
+
+
+  <HorizontalCard
+    title="Currently contributing to ASReview"
+    img="/asreview.jpg"
+    desc="I am calculating the inter-rater reliability for ASReview!"
+    url="https://github.com/asreview"
     badge="FOSS"
   />
-  <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 4"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 5"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="Coding "
+    desc="I am coding interview questions for dr. Struminskaya"
+    url="https://github.com/asreview"
   />
 </BaseLayout>

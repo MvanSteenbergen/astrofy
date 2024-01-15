@@ -1,78 +1,60 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
-import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
 
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
+    <div class="text-xl py-1">Nice to meet you!</div>
+    <div class="text-5xl font-bold">I'm Maas van Steenbergen</div>
+    <div class="text-3xl py-3 font-bold">Data Scientist & Statistician</div>
     <div class="py-2">
       <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
+        I’m a driven methodology and statistics student graduating in June. I am critically minded, ready to admit my own mistakes, and hard-working. I have no problems with being a beginner in something, and I embrace the challenges and learning opportunities that come with it. 
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
+      <a class="btn" href="mailto:mvansteenbergen@proton.me" target="_blank"> Shoot me an e-mail!</a>
+      <a href="https://github.com/MvanSteenbergen" target="_blank" class="btn btn-outline ml-5">
+        Find me on GitHub!
       </a>
     </div>
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-2">My last projects</div>
   </div>
 
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
+    <HorizontalCard
+    title="Check out my thesis :)"
+    img="/time_series_plot.png"
+    desc="I am writing my thesis on the relationship between ordinal estimates of psychological measurements and quantitative structures. See my progress on GitHub!"
+    url="https://github.com/MvanSteenbergen/MasterThesisRQA"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    title="Machine Learning"
+    img="/xgboost.png"
+    desc="I am contributing to a group project where we use XGBoost to classify noisy signals from noise alone."
     url="#"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="Full-Stack Development"
+    img="/fullstackopen.png"
+    desc="I am working through the venerated Full Stack Open MOOC by Helsinki University. See my progress on GitHub!"
+    url="https://github.com/MvanSteenbergen/FullStackOpen"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Currently contributing to ASReview"
+    img="/asreview.jpg"
+    desc="I am calculating the inter-rater reliability for ASReview!"
+    url="https://github.com/asreview"
     badge="FOSS"
   />
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
-  </div>
-
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
 </BaseLayout>
